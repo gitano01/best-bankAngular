@@ -28,13 +28,13 @@ export class AuthService {
     //llamado al Post de spring security
    
     const userData = this.http.post<Response>(url, data, { headers })
-      .subscribe(response:any  => {
-        this.codigo = response['codigo'];
+      .subscribe(response  => {
+       
 
         this.isLoggedIn = true;
         console.log(this.isLoggedIn);
         console.log("Respuesta del servidor ", response);
-        console.log("Respuesta del servidor ", this.response['']);
+       
         
       });
 
