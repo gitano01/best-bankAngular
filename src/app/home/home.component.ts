@@ -15,10 +15,10 @@ export class HomeComponent{
 
 
   constructor(private authService: AuthService, private router: Router) {
-    if(this.authService.getSession() !== "true"){
-      console.log(this.authService.getSession());
-        this.router.navigate(['login']);
-      }
+    // if(this.authService.getSession() !== "true"){
+    //   console.log("Haber mi chavo " + this.authService.getSession());
+    //     this.router.navigate(['login']);
+    //   }
 
   }
 

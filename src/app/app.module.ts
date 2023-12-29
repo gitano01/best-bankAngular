@@ -13,6 +13,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ButtonLogoutComponent } from './button-logout/button-logout.component';
 import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -24,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
     SignupComponent,
     HomeComponent,
     ButtonLogoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

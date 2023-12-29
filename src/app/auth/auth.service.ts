@@ -62,8 +62,7 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    return localStorage.getItem("session");
-    //return this.isLoggedIn;
+    return localStorage.getItem("session");   
   }
 
   async _saveSession() {
