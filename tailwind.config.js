@@ -7,7 +7,12 @@ module.exports = {
     },
     darkMode: 'class', // or 'media' or 'class'
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+          'green-brand-500': '#169D3C',
+          'green-brand-200': '#6FCF97'
+        }
+      },
     },
     variants: {
       extend: {},

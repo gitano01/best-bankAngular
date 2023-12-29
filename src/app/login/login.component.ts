@@ -17,6 +17,7 @@ export class LoginComponent {
 
   loginForm: FormGroup;
   isLoggedIn = false;
+  errorMessage: string='';
 
   constructor(private fb: FormBuilder, private authService: AuthService,  private title: Title, private router: Router) {
 
@@ -30,7 +31,17 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       // Aquí puedes realizar la lógica de autenticación
       const formData: LoginForm = this.loginForm.value as LoginForm;
-      this.authService.validAuth(formData);
+      if(this.authService.validAuth(formData) == false){
+        this.errorMessage='El username y/o contraseña esta incorrecto';
+        setTimeout(()=>{
+          this.errorMessage='';          
+          this.loginForm.reset();
+        }, 3000);
+        
+      }else{
+        this._saveSession();
+        this.router.navigate(['home']);
+      }
     }
   }
 

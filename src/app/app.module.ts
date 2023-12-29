@@ -12,6 +12,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ButtonLogoutComponent } from './button-logout/button-logout.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -22,7 +23,8 @@ import { ButtonLogoutComponent } from './button-logout/button-logout.component';
     LoginComponent,
     SignupComponent,
     HomeComponent,
-    ButtonLogoutComponent
+    ButtonLogoutComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

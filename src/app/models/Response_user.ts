@@ -1,12 +1,13 @@
 export interface Response_user{
     codigo:   number;
     mensaje:  string;
-    response: Usuario;
+    response: any;
 }
+
 interface Usuario {
     usuario_id:         number;
     usuario:            string;
-    contrasenia:        null;
+    contrasenia:        string;
     email:              string;
     activo:             boolean;
     rol_id:             number;
